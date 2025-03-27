@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
+    font-family: "robot", thin;
     margin: 0px;
     padding: 0px;
 }
@@ -9,6 +10,7 @@ body{
     background-color: rgb(250, 244, 235);
     height: 100vh;
 }
+
 
 .grid-principal{
     display: grid;
@@ -82,3 +84,9 @@ body{
     grid-column-start: 2;
     height: 75%;
 }
+
+.textos{
+    font-family: "robot";
+    font-size: 900%;
+    text-align: center;
+}   
