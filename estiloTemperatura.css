@@ -68,7 +68,7 @@ body{
     grid-row-start: 3;
     grid-row-end: 5;
     display: grid;
-    grid-template-rows: 40% 50% auto;
+    grid-template-rows: 40% 60%;
     
 }
 
@@ -87,8 +87,8 @@ body{
     background-color: rgb(241, 235, 227);
     border-radius: 30px;
     box-shadow:rgb(196, 199, 218) 0px 2px 1px, rgba(196, 199, 218) 0px 4px 2px, rgba(196, 199, 218) 0px 8px 4px;
-    margin-left: 3%;
-    margin-top:3%;
+    margin-left:3%;
+    margin-top: 3%;
 }
 
 .calendario{
@@ -167,6 +167,6 @@ body{
     filter: brightness(0) invert(1); /* branco */
 }
 
-button:active{
+.button:active{
     box-shadow: inset rgb(6, 31, 9) 1px 3px 3px 3px;
 }
