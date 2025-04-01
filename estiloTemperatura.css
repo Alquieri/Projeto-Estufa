@@ -51,12 +51,16 @@ body{
 }
 
 
-.navigation{
+.button{
     height: 80%;
     border-radius: 0 90px 90px 0px;
     box-shadow:rgb(196, 199, 218) 0px 2px 1px, rgba(196, 199, 218) 0px 4px 2px, rgba(196, 199, 218) 0px 8px 4px;
     margin-right: 20px;
-    border-width: 0px;
+    background-color: rgb(226, 220, 212);
+}
+
+.bordinha{
+    border: 2px solid rgb(30, 82, 20);
 }
 
 
@@ -106,6 +110,7 @@ body{
     justify-content: center;
     align-items: center;
     color: black;
+    text-decoration: none;
 }   
 
 .textosMeio{
@@ -135,10 +140,7 @@ body{
 }
 
 
-.button{
-    background-color: rgb(226, 220, 212);
-    text-decoration: none;
-}
+
 
 /* Mudar as cores */
 
