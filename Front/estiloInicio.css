@@ -14,7 +14,7 @@ body{
 
 .grid-principal{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 25% 50% 25%;
     grid-template-rows: 8% 2% 45% auto;
     height: 100%;
 
