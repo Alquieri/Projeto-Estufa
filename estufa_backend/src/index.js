@@ -14,3 +14,4 @@ const port = 8080; // local host : 8080 / cadastro
 const server = app.listen(port, () => console.log(`Listening on port ${port}`)); //log = print
 
 module.exports = server;
+
