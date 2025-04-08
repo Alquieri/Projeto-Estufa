@@ -3,8 +3,9 @@ const PersonController = require('../controller/PersonController');
 const router = express.Router();
 router
     .get('/pegar', PersonController.getAllPeople)
-    .get('/pegarID', PersonController.getById)
-    .post('/cadastro', PersonController.create)
-    .patch('/:id', PersonController.updateById)
-    .delete('/:id', PersonController.deleteById)
+    .get('/pegar/:id', PersonController.getById)
+    .post('/', PersonController.create)
+    .patch('/atualizar/:id', PersonController.updateById)
+    .delete('/deletar/:id', PersonController.deleteById)
+// dois pontos ele vai receber um parametro
 module.exports = router;
