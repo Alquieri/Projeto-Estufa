@@ -8,5 +8,4 @@ router
     .patch('/atualizar/:id', PersonController.updateById)
     .delete('/deletar/:id', PersonController.deleteById)
 // dois pontos ele vai receber um parametro
-// patch so um dado
 module.exports = router;
