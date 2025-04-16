@@ -70,6 +70,21 @@ class AcionadoresController {
             return res.status(500).send({ error: error.message });
         }
     }
+    static async getLatest(req, res) {
+        try {
+            const [rows] = await pool.execute(
+                'SELECT * FROM acionadores ORDER BY timestamp DESC LIMIT 1'
+            );
+
+            if (rows.length === 0) {
+                return res.status(404).send({ message: "Nenhum dado encontrado" });
+            }
+
+            return res.status(200).json(rows[0]);
+        } catch (error) {
+            return res.status(500).send({ error: error.message });
+        }
+    }
 }
 
 module.exports = AcionadoresController;

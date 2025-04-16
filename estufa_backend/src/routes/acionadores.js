@@ -7,6 +7,7 @@ router
     .get('/valores/:id', AcionadoresController.getById)
     .put('/atualizar-valvulas/:id', AcionadoresController.updateValvulas)
     .put('/atualizar-irrigacao/:id', AcionadoresController.updateIrrigacao)
-    .put('/atualizar-bomba/:id', AcionadoresController.updateBomba);
+    .put('/atualizar-bomba/:id', AcionadoresController.updateBomba)
+    .get('/latest', AcionadoresController.getLatest);
 // dois pontos ele vai receber um parametro
 module.exports = router;
