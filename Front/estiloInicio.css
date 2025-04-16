@@ -251,4 +251,7 @@ body{
     color:  rgb(74, 138, 62);
   }
   
- 
+.sensor-data{
+    font-size: 2em;
+    margin-left: 20%;
+}
