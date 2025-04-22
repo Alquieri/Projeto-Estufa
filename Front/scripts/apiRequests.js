@@ -37,7 +37,7 @@ async function getSensorData() {
         return {
             umidade: data.umidade || 0,
             temperatura_externa: data.temperatura_externa || 0,
-            temperatura_externa: data.temperatura_interna || 0,
+            temperatura_interna: data.temperatura_interna || 0,
             nivel_agua: data.nivel_agua || 0,
         };
     } catch (error) {

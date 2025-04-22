@@ -252,11 +252,18 @@ body{
   }
   
 .sensor-data{
-    font-size: 2em;
+    font-size: 1.4em;
     margin-left: 20%;
 }
 
 .acionador-data{
   font-size: 2em;
   margin-left: 20%;
+}
+
+.centralizar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
