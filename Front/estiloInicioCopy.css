@@ -132,6 +132,11 @@ body {
   margin: 0 1rem 1rem 1rem;
 }
 
+.img_meio {
+  height: 50%;
+  margin: 1.5em 1em 1em 1em;
+}
+
 /* CALENDARIO */
 
 .calendar {
