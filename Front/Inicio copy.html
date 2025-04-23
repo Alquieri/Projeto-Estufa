@@ -1,63 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "./estiloInicioCopy.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./estiloInicioCopy.css" />
     <title>CiberFarm</title>
-    
-    <link rel="shortcut icon" type="imagex/png" href="./Imagens/logo.png">
 
-</head>
-<body>
-    <div class = "barra-superior">
+    <link rel="shortcut icon" type="imagex/png" href="./Imagens/logo.png" />
+  </head>
+  <body>
+    <div class="barra-superior">
       <a href="./Inicio.html">
-        <img class = "ciberfarm" src="./Imagens/CyberFarm.png" alt="AA">
+        <img class="ciberfarm" src="./Imagens/CyberFarm.png" alt="AA" />
       </a>
     </div>
 
-    <div class = "flex">
-
-    <div class = "alinha-navegacao">
-      <div class = "navegacao bordinha">
-        <a href="./Inicio.html" class = "textosNavigation button">
-          <img class="dash" src="./Imagens/home.png" alt="Sem casa">
-          Dashboard
-        </a>
+    <div class="flex">
+      <div class="alinha-navegacao">
+        <div class="navegacao bordinha">
+          <a href="./Inicio.html" class="textosNavigation button">
+            <img class="dash" src="./Imagens/home.png" alt="Sem casa" />
+            Dashboard
+          </a>
+        </div>
+        <div class="navegacao">
+          <a href="./temperatura.html" class="textosNavigation button">
+            <img
+              class="temp"
+              src="./Imagens/thermometer.png"
+              alt="Sem temperatura"
+            />
+            Temperatura
+          </a>
+        </div>
+        <div class="navegacao">
+          <a href="./irrigacao.html" class="textosNavigation button">
+            <img class="agua" src="./Imagens/water.png" alt="Sem água" />
+            Irrigação
+          </a>
+        </div>
       </div>
-      <div class = "navegacao">
-        <a href="./temperatura.html" class = "textosNavigation button">
-          <img class="temp" src="./Imagens/thermometer.png" alt="Sem temperatura">
-          Temperatura
-        </a>
+
+      <div class="alinha-meio">
+        <div>
+          <div class="meio">
+            <div class="texto">Humildade</div>
+          </div>
+          <div class="meio">
+            <div class="texto">Acionadores</div>
+          </div>
+        </div>
+        <div>
+          <div class="meio">
+            <div class="texto">Temperatura Interna</div>
+          </div>
+          <div class="meio">
+            <div class="texto">Temperatura Externa</div>
+          </div>
+        </div>
       </div>
-      <div class = "navegacao">
-        <a href = "./irrigacao.html" class = "textosNavigation button">
-          <img class="agua" src="./Imagens/water.png" alt="Sem água">
-          Irrigação
-        </a>
-      </div>
-    </div>
-  
-    <div class = "alinha-meio">
-      <div>
-      <div class = "meio"></div>
-      <div class = "meio"></div>
-    </div>
-    <div>
-      <div class = "meio"></div>
-      <div class = "meio"></div>
-    </div>
-    </div>
 
-    <div class = "calendar"></div>
-  
-
-  </div>
-    
-
+      <div class="calendar"></div>
+    </div>
 
     <script src="scripts/updateSensors.js"></script>
     <script src="scripts/updateAcionadores.js"></script>
-</body>
+  </body>
 </html>
