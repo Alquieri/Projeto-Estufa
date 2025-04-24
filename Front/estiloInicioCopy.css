@@ -58,6 +58,7 @@ body {
   box-shadow: rgb(196, 199, 218) 0px 2px 1px, rgba(196, 199, 218) 0px 4px 2px,
     rgba(196, 199, 218) 0px 8px 4px;
   background-color: rgb(226, 220, 212);
+  transition: .9s; 
 }
 
 /* Mudar as cores */
@@ -140,12 +141,44 @@ body {
 /* CALENDARIO */
 
 .calendar {
+  padding: 3vh;
   background-color: rgb(241, 235, 227);
-  border-radius: 10%;
+  border-radius: 30px;
   box-shadow: rgb(196, 199, 218) 0px 2px 1px, rgba(196, 199, 218) 0px 4px 2px,
     rgba(196, 199, 218) 0px 8px 4px;
-  height: 53vh;
-  /* transition: .9s; */
+  height: 18vh;
   width: 53vh;
   margin-right: 7vh;
+  display: flex;
+  justify-content: center;
+
+}
+
+.input-date {
+
+  width: 80%;
+  padding: 15px;
+  font-size: 16px;
+  font-family: inherit;
+  color: rgb(30, 82, 20);
+  background-color: #f1ebe3;
+  border: 2px solid rgb(30, 82, 20); 
+  border-radius: 20px;
+  outline: none;
+  margin-top: 30px;
+  margin-bottom: auto;
+}
+
+.input-date:focus {
+  border-color: #388e3c;
+  box-shadow: 0 0 8px rgb(30, 82, 20)
+}
+
+/* Estiliza o ícone do calendário no Chrome */
+.input-date::-webkit-calendar-picker-indicator {
+  background-color: rgb(136, 187, 142);
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
 }
