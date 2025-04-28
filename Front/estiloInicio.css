@@ -130,6 +130,23 @@ body {
   color: rgb(61, 61, 61);
 }
 
+.texto-sensores {
+  font-size: 6vh;
+  color: rgb(61, 61, 61);
+  text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translate(-50%, -50%); /* Centraliza exatamente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8%;
+}
+
 .bordinha {
   border: 2px solid rgb(30, 82, 20);
 }
@@ -150,6 +167,7 @@ body {
     rgba(196, 199, 218) 0px 8px 4px;
   background-color: rgb(241, 235, 227);
   margin: 0 1rem 1rem 1rem;
+  position: relative; 
 }
 
 .img_meio {
