@@ -16,11 +16,11 @@ async function fetchLatestSensorData() {
 
 function updateSensorDisplay(data) {
     const sensorDataElements = document.querySelectorAll(".sensor-data");
-    if (sensorDataElements.length >= 4) {
+    if (sensorDataElements.length >= 3) {
         sensorDataElements[0].textContent = `${data.umidade || 0}%`; // Umidade
         sensorDataElements[1].textContent = `${data.temperatura_interna || 0}°C`; // Temperatura interna
         sensorDataElements[2].textContent = `${data.temperatura_externa || 0}°C`;
-        sensorDataElements[3].textContent = `${data.nivel_agua || 0}%`; // Nível de água
+        // sensorDataElements[3].textContent = `${data.nivel_agua || 0}%`; 
     } else {
         console.error("Elementos .sensor-data não encontrados no DOM.");
     }

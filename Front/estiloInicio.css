@@ -139,7 +139,7 @@ body {
 .container {
   position: absolute;
   top: 50%;
-  right: 15%;
+  right: 3%;
   transform: translate(-50%, -50%); /* Centraliza exatamente */
   display: flex;
   align-items: center;
