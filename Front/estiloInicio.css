@@ -100,7 +100,19 @@ body {
 }
 
 .navegacao:active {
-  box-shadow: inset rgb(136, 187, 142) 1px 3px 3px 3px;
+  box-shadow: inset rgb(16, 43, 19) 1px 3px 3px 3px;
+}
+
+.circulo:hover {
+  background-color: rgb(30, 82, 20);
+  cursor: pointer;
+}
+.circulo:hover .acionador-data {
+  color: rgba(226, 220, 212, 0.822);
+}
+
+.circulo:active {
+  box-shadow: inset rgb(16, 43, 19) 1px 3px 3px 3px;
 }
 
 /* Icons */
@@ -167,7 +179,7 @@ body {
     rgba(196, 199, 218) 0px 8px 4px;
   background-color: rgb(241, 235, 227);
   margin: 0 1rem 1rem 1rem;
-  position: relative; 
+  position: relative;
 }
 
 .img_meio {
@@ -231,5 +243,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2vw;
+  transition: 0.9s;
+}
+
+.acionador-data {
+  font-size: 4vh;
+  color: black;
+  text-decoration: none;
 }
