@@ -248,6 +248,12 @@ body {
 
 .acionador-data {
   font-size: 4vh;
-  color: black;
+  color: rgb(61, 61, 61);
+  text-decoration: none;
+}
+
+.sensor-data {
+  font-size: 2.5vw;
+  color: rgb(61, 61, 61);
   text-decoration: none;
 }

@@ -8,11 +8,18 @@ create table Sensores(
     nivel_agua decimal(5,2) not null
 );
 
-create table Acionadores(
-	ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    valvulas bool not null,
-    irrigacao bool not null,
-    bomba bool not null
+
+create table acionadores(
+id int not null auto_increment primary key,
+tipo varchar(60),
+estado bool,
+data datetime
 );
+
+insert into acionadores values
+(1, "valvulas", 1, NOW()),
+(2, "bomba", 1, NOW()),
+(3, "irrigacao", 1, NOW());
+
 
 
