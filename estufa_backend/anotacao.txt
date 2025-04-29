@@ -1,4 +1,22 @@
 -- TABELAS SQL
+-- Criação do banco de dados
+CREATE DATABASE IF NOT EXISTS projetinho;
+
+-- Seleção do banco
+USE projetinho;
+
+CREATE TABLE sensores (
+    ID INT PRIMARY KEY,
+    umidade DECIMAL(5,2),
+    temperatura_interna DECIMAL(5,2),
+    temperatura_externa DECIMAL(5,2),
+    nivel_agua DECIMAL(5,2),
+    timestamp DATETIME
+);
+
+-- Inserção de dados na tabela sensores
+INSERT INTO sensores (ID, umidade, temperatura_interna, temperatura_externa, nivel_agua, timestamp) VALUES
+(1, 65.25, 22.30, 18.75, 12.50, '2025-04-16 14:19:44');
 
 create table Sensores(
 	ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
