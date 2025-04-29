@@ -257,3 +257,8 @@ body {
   color: rgb(61, 61, 61);
   text-decoration: none;
 }
+.circulo.ativo {
+  color: white; /* Texto branco */
+  box-shadow: 0 0 10px 4px #388e3c; /* Sombra verde */
+  border: none; /* Remove a borda */
+}

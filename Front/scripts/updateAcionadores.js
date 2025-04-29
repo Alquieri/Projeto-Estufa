@@ -99,4 +99,23 @@ function updateAcionadorDisplay(data) {
     }
 }
 
+document.querySelectorAll('.circulo').forEach((button, index) => {
+    button.addEventListener('click', () => {
+        const acionadorDataElements = document.querySelectorAll(".acionador-data");
+        const element = acionadorDataElements[index]; // Obtém o elemento correspondente ao botão
+        if (!element) {
+            console.error(`Elemento acionador-data no índice ${index} não encontrado.`);
+            return;
+        }
+
+        const estado = parseInt(element.textContent.trim(), 10); // Converte o estado para número
+        if (estado === 0) {
+            button.classList.add('ativo'); // Adiciona a classe 'ativo' se o estado for 1
+        } else {
+            button.classList.remove('ativo'); // Remove a classe 'ativo' caso contrário
+        }
+    });
+});
+
+
 document.addEventListener("DOMContentLoaded", fetchLatestAcionadorData);
