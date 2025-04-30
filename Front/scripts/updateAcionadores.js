@@ -14,15 +14,15 @@ const updateControls = async (index) => {
         return;
     }
 
-    const estadoAtual = parseInt(element.textContent.trim(), 10); // Converte o estado para número
-    const estadoInvertido = estadoAtual === 1 ? 0 : 1; // Inverte o estado
-    console.log(`Círculo clicado no índice ${index}, valor: ${estadoAtual}`); // Log do índice clicado
+    const estadoAtual = parseInt(element.textContent.trim(), 10); 
+    const estadoInvertido = estadoAtual === 1 ? 0 : 1; 
+    console.log(`Círculo clicado no índice ${index}, valor: ${estadoAtual}`); 
 
     const requestOptions = {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        index: index + 1, // Adiciona o índice ao corpo da requisição
-        body: JSON.stringify({ index: ++index, estado: estadoInvertido }) // Envia o índice e o valor no corpo da requisição
+        index: index + 1, 
+        body: JSON.stringify({ index: ++index, estado: estadoInvertido }) 
     };
 
     try {
@@ -118,4 +118,3 @@ document.querySelectorAll('.circulo').forEach((button, index) => {
 });
 
 
-document.addEventListener("DOMContentLoaded", fetchLatestAcionadorData);
