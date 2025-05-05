@@ -78,10 +78,3 @@ npm run dev
 Abra o arquivo `Front/index.html` no seu navegador para visualizar a interface da estufa.
 
 ---
-
-
-
----
-
-Se quiser que eu já adicione esse conteúdo diretamente no repositório via pull request ou gere um arquivo `.md` para download, é só avisar! Deseja isso?
-```
