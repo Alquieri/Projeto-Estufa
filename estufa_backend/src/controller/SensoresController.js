@@ -39,6 +39,30 @@ class SensoresController {
             return res.status(500).send({ error: error.message });
         }
     }
+    
+    static async getByDate(req, res) {
+        const { date } = req.query; // Exemplo: 2025-05-05
+    
+        if (!date) {
+            return res.status(400).send({ message: "Data não fornecida" });
+        }
+    
+        try {
+            const [rows] = await pool.execute(
+                'SELECT * FROM sensores WHERE DATE(timestamp) = ? ORDER BY timestamp DESC',
+                [date]
+            );
+    
+            if (rows.length === 0) {
+                return res.status(404).send({ message: "Nenhum dado encontrado para essa data" });
+            }
+    
+            return res.status(200).json(rows);
+        } catch (error) {
+            return res.status(500).send({ error: error.message });
+        }
+    }
+    
 }
 
 module.exports = SensoresController;
