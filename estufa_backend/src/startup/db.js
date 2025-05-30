@@ -6,8 +6,8 @@ const mysql = require('mysql2/promise');
 const pool = mysql.createPool({
     host: 'localhost',   // Altere se o banco estiver em outro host
     user: 'root',        // Seu usuário do MySQL
-    password: process.env.SQLPASSWORD,        // Sua senha do MySQL
-    database: 'Projetinho', // Nome do banco de dados
+    password: 'senha',        // Sua senha do MySQL
+    database: 'projeto_estufa', // Nome do banco de dados
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0,
