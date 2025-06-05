@@ -59,21 +59,13 @@ cd Projeto-Estufa/estufa_backend
 npm install
 ```
 
-### 3. Configure as variáveis de ambiente
-
-Crie um arquivo `.env` baseado no exemplo abaixo:
-
-```env
-SQLPASSWORD="SuaSenhaSQL"
-```
-
-### 4. Inicie o servidor
+### 3. Inicie o servidor
 
 ```bash
 npm run dev
 ```
 
-### 5. Abra o front-end
+### 4. Abra o front-end
 
 Abra o arquivo `Front/index.html` no seu navegador para visualizar a interface da estufa.
 
