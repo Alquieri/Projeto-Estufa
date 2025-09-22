@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estiloInicio.css" />
+    <title>CiberFarm</title>
+
+    <link rel="shortcut icon" type="imagex/png" href="./Imagens/logo.png" />
+  </head>
+  <body>
+    <div class="barra-superior">
+      <a href="./Inicio.html">
+        <img class="ciberfarm" src="../Imagens/CyberFarm.png" alt="AA" />
+      </a>
+    </div>
+
+    <div class="flex">
+      <div class="alinha-navegacao">
+        <div class="navegacao bordinha">
+          <a href="./Inicio.html" class="textosNavigation button">
+            <img class="dash" src="../Imagens/home.png" alt="Sem casa" />
+            Dashboard
+          </a>
+        </div>
+        <div class="navegacao">
+          <a href="./temperatura.html" class="textosNavigation button">
+            <img
+              class="temp"
+              src="../Imagens/thermometer.png"
+              alt="Sem temperatura"
+            />
+            Temperatura
+          </a>
+        </div>
+        <div class="navegacao">
+          <a href="../irrigacao.html" class="textosNavigation button">
+            <img class="agua" src="../Imagens/water.png" alt="Sem água" />
+            Irrigação
+          </a>
+        </div>
+      </div>
+
+      <div class="alinha-meio">
+        <div>
+          <div class="meio">
+            <div class="texto">Humildade</div>
+            <img
+              class="img_meio"
+              src="../Imagens/humidity.png"
+              alt="Sem humildade"
+            />
+            <div class="texto-sensores container">
+              <span id="umidade" class="sensor-data">--%</span>
+              <!--HUMILDADE -->
+            </div>
+          </div>
+          <div class="meio">
+            <div class="texto">Acionadores</div>
+            <div class="flex3">
+              <div id = "valvula" class="circulo">
+                <span>--</span>
+              </div>
+              <div id = "bomba" class="circulo">
+                <span>--</span>
+              </div>
+              <div id = "irrigacao" class="circulo">
+                <span>--</span>
+              </div> 
+            </div>
+            <div class="flex3">
+              <div class="texto">Valvula</div>
+              <div class="texto">Bomba</div>
+              <div class="texto">Irrigação</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="meio">
+            <div class="texto">Temperatura Interna</div>
+            <img
+              src="../Imagens/temperatures.png"
+              class="img_meio"
+              alt="No temperatures"
+            />
+            <div class="texto-sensores container">
+              <span class="sensor-data">--%</span>
+              <!--TEMPERATURA INTERNA -->
+            </div>
+          </div>
+          <div class="meio">
+            <div class="texto">Temperatura Externa</div>
+            <img
+              src="../Imagens/temperatures.png"
+              class="img_meio"
+              alt="No temperatures"
+            />
+            <div class="texto-sensores container">
+              <span class="sensor-data">--%</span>
+              <!--TEMPERATURA EXTERNA -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calendar">
+        <div class="texto">Data</div>
+        <input type="date" class="input-date" />
+        <button id="buscar-data">Buscar</button>
+      </div>
+    </div>
+
+    <div class="flex2">
+      <img
+        class="tomatinho"
+        src="../Imagens/CicloTomatinho.png"
+        alt="Não achei o tomatinho"
+      />
+    </div>
+
+    <script src="scripts/updateSensors.js"></script>
+    <script src="scripts/updateAcionadores.js"></script>
+    <script src="scripts/filtroData.js"></script>
+    <script type = "module" src= "../scripts/script.js"></script>
+  </body>
+</html>

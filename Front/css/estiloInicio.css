@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* vh - viewport height
+vw - viewport width */
+
+* {
+  font-family: Roboto, sans-serif;
+  margin: 0px;
+  padding: 0px;
+
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(250, 244, 235);
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7vh;
+}
+
+.flex2 {
+  display: flex;
+  justify-content: center;
+}
+
+.flex3 {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2vh;
+}
+
+.alinha-navegacao {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  height: 30vh;
+  width: 20vw;
+  min-width: 120px;
+}
+
+.barra-superior {
+  display: flex;
+  height: 8vh;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 2vw;
+  background-color: rgb(241, 235, 227);
+  box-shadow: rgb(196, 199, 218) 0px 2px 1px, rgba(196, 199, 218) 0px 4px 2px,
+    rgba(196, 199, 218) 0px 8px 4px;
+}
+
+.ciberfarm {
+  height: 6vh;
+}
+
+.navegacao {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 8vh;
+  padding-left: 20%;
+  width: 100%;
+  border-radius: 0 90px 90px 0px;
+  box-shadow: rgb(196, 199, 218) 0px 2px 1px, rgba(196, 199, 218) 0px 4px 2px,
+    rgba(196, 199, 218) 0px 8px 4px;
+  background-color: rgb(226, 220, 212);
+  transition: 0.9s;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  height: 8vh;
+  width: 100%;
+  border-radius: 0 90px 90px 0px;
+}
+
+/* Mudar as cores */
+
+.navegacao:hover {
+  background-color: rgb(30, 82, 20);
+  cursor: pointer;
+}
+.navegacao:hover .textosNavigation {
+  color: rgba(226, 220, 212, 0.822);
+}
+.navegacao:hover .agua {
+  filter: brightness(0) invert(1); /* branco */
+}
+.navegacao:hover .temp {
+  filter: brightness(0) invert(1); /* branco */
+}
+.navegacao:hover .dash {
+  filter: brightness(0) invert(1); /* branco */
+}
+
+.navegacao:active {
+  box-shadow: inset rgb(16, 43, 19) 1px 3px 3px 3px;
+}
+
+.circulo:hover {
+  background-color: rgb(30, 82, 20);
+  cursor: pointer;
+}
+.circulo:hover .acionador-data {
+  color: rgba(226, 220, 212, 0.822);
+}
+
+.circulo:active {
+  box-shadow: inset rgb(16, 43, 19) 1px 3px 3px 3px;
+}
+
+/* Icons */
+.agua {
+  height: 3vh;
+  margin-right: 1vw;
+}
+.temp {
+  height: 3vh;
+  margin-right: 1vw;
+}
+.dash {
+  height: 3vh;
+  margin-right: 1vw;
+}
+
+/* textos */
+.textosNavigation {
+  font-size: 2.5vh;
+  color: black;
+  text-decoration: none;
+}
+
+.texto {
+  font-size: 2.5vh;
+  /* display: flex; */
+  color: rgb(61, 61, 61);
+}
+
+.texto-sensores {
+  font-size: 6vh;
+  color: rgb(61, 61, 61);
+  text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translate(-50%, -50%); /* Centraliza exatamente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8%;
+}
+
+.bordinha {
+  border: 2px solid rgb(30, 82, 20);
+}
+
+.alinha-meio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meio {
+  align-content: flex-start;
+  height: 25vh;
+  width: 23vw;
+  padding: 3vh;
+  border-radius: 15%;
+  box-shadow: rgb(196, 199, 218) 0px 2px 1px, rgba(196, 199, 218) 0px 4px 2px,
+    rgba(196, 199, 218) 0px 8px 4px;
+  background-color: rgb(241, 235, 227);
+  margin: 0 1rem 1rem 1rem;
+  position: relative;
+}
+
+.img_meio {
+  height: 50%;
+  margin: 1.5em 1em 1em 1em;
+}
+
+/* CALENDARIO */
+
+.calendar {
+  padding: 3vh;
+  background-color: rgb(241, 235, 227);
+  border-radius: 30px;
+  box-shadow: rgb(196, 199, 218) 0px 2px 1px, rgba(196, 199, 218) 0px 4px 2px,
+    rgba(196, 199, 218) 0px 8px 4px;
+  height: 18vh;
+  width: 53vh;
+  margin-right: 7vh;
+  display: flex;
+  justify-content: center;
+}
+
+.input-date {
+  width: 80%;
+  padding: 3%;
+  font-size: 16px;
+  font-family: inherit;
+  color: rgb(30, 82, 20);
+  background-color: #f1ebe3;
+  border: 2px solid rgb(30, 82, 20);
+  border-radius: 20px;
+  outline: none;
+  margin-top: 10%;
+}
+
+.input-date:focus {
+  border-color: #388e3c;
+  box-shadow: 0 0 8px rgb(30, 82, 20);
+}
+
+/* Estiliza o ícone do calendário no Chrome */
+.input-date::-webkit-calendar-picker-indicator {
+  background-color: rgb(136, 187, 142);
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tomatinho {
+  height: 12vw;
+  margin-right: 10vw;
+}
+
+.circulo {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  /* background-color: rgb(226, 220, 212); */
+  border: 2px solid rgb(30, 82, 20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.9s;
+}
+
+.acionador-data {
+  font-size: 4vh;
+  color: rgb(61, 61, 61);
+  text-decoration: none;
+}
+
+.sensor-data {
+  font-size: 2.5vw;
+  color: rgb(61, 61, 61);
+  text-decoration: none;
+}
+.circulo.ativo {
+  color: white; /* Texto branco */
+  box-shadow: 0 0 10px 4px #388e3c; /* Sombra verde */
+  border: none; /* Remove a borda */
+}
+
+#buscar-data {
+  margin-top: 10%;
+  margin-left: 3%;
+  padding: 1vh 2vw;
+  font-size: 2vh;
+  color: black;;
+  background-color: #f1ebe3;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.9s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgb(30, 82, 20);
+}
+
+#buscar-data:hover {
+  color: white; /* Texto branco */
+  background-color: rgb(30, 82, 20);
+}
+
+#buscar-data:active {
+  background-color: rgb(16, 43, 19);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3);
+  transform: scale(0.98);
+}
+
