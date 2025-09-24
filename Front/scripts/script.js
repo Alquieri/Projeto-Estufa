@@ -1,10 +1,13 @@
 import {service} from "./firebaseConnect.js"
 
-service.user = "GUI"
+service.user = "Estufafa"
 
 const valvula =  document.getElementById("valvula")
 const bomba =  document.getElementById("bomba")
 const irrigacao =  document.getElementById("irrigacao")
+
+const umidade = document.getElementById("umidade-data")
+const temp_int = document.getElementById("temperatura-data-int")
 
 let valueValvula = false
 let valueBomba = false
@@ -12,18 +15,25 @@ let valueIrrigacao = false
 
 let data = {}
 const load_data = async () => {
-    data = await service.load();    
-    
+    data = await service.load(); 
+    puxa_Acionadores();
+
+    umidade.textContent = data.Sensor.Umidade
+    temp_int.textContent = data.Sensor.Temperatura
 }
 load_data()
+
 
 const puxa_Acionadores = async () => {
 
     valvula.textContent = data.Acionadores.Valvula ? '1' : '0'
-    
+    // valueValvula = data.Acionadores.Valvula
+
     bomba.textContent = data.Acionadores.Bomba ? '1' : '0'
+    // valueBomba = data.Acionadores.Bomba
     
     irrigacao.textContent = data.Acionadores.Irrigacao ? '1' : '0' 
+    // valueIrrigacao = data.Acionadores.Irrigacao
 
 }
 
@@ -59,12 +69,11 @@ irrigacao.addEventListener('click', () => {
     });
 
 
-// puxa_Acionadores();
 
+setInterval(() => {
+    load_data();
 
-// setInterval(() => {
-//     load_data();
-// }, 10000);
+}, 100);
 
 
 

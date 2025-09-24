@@ -24,16 +24,6 @@
           </a>
         </div>
         <div class="navegacao">
-          <a href="./temperatura.html" class="textosNavigation button">
-            <img
-              class="temp"
-              src="../Imagens/thermometer.png"
-              alt="Sem temperatura"
-            />
-            Temperatura
-          </a>
-        </div>
-        <div class="navegacao">
           <a href="./sobre.html" class="textosNavigation button">
             <img class="agua" src="../Imagens/water.png" alt="Sem água" />
             Sobre
@@ -51,7 +41,7 @@
               alt="Sem humildade"
             />
             <div class="texto-sensores container">
-              <span id="umidade" class="sensor-data">--%</span>
+              <span id="umidade-data" class="sensor-data">--</span>%
               <!--HUMILDADE -->
             </div>
           </div>
@@ -84,7 +74,7 @@
               alt="No temperatures"
             />
             <div class="texto-sensores container">
-              <span class="sensor-data">--%</span>
+              <span class="sensor-data" id = "temperatura-data-int" >--</span>°
               <!--TEMPERATURA INTERNA -->
             </div>
           </div>
@@ -96,7 +86,7 @@
               alt="No temperatures"
             />
             <div class="texto-sensores container">
-              <span class="sensor-data">--%</span>
+              <span class="sensor-data" id = "temperatura-data">--</span>°
               <!--TEMPERATURA EXTERNA -->
             </div>
           </div>
@@ -118,9 +108,10 @@
       />
     </div>
 
-    <script src="scripts/updateSensors.js"></script>
+    <!-- <script src="scripts/updateSensors.js"></script>
     <script src="scripts/updateAcionadores.js"></script>
-    <script src="scripts/filtroData.js"></script>
+    <script src="scripts/filtroData.js"></script> -->
     <script type = "module" src= "../scripts/script.js"></script>
   </body>
 </html>
+#
