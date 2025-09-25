@@ -8,20 +8,29 @@ const irrigacao =  document.getElementById("irrigacao")
 
 const umidade = document.getElementById("umidade-data")
 const temp_int = document.getElementById("temperatura-data-int")
+const luz = document.getElementById("luminosidade-data") 
+
+let data = {}
 
 let valueValvula = false
 let valueBomba = false
 let valueIrrigacao = false
 
-let data = {}
+
 const load_data = async () => {
     data = await service.load(); 
+    
+    valueValvula = data.Acionadores.Valvula;
+    valueBomba = data.Acionadores.Bomba;
+    valueIrrigacao = data.Acionadores.Irrigacao;
+
     puxa_Acionadores();
 
     umidade.textContent = data.Sensor.Umidade
     temp_int.textContent = data.Sensor.Temperatura
+    luz.textContent = data.Sensor.Luz
+
 }
-load_data()
 
 
 const puxa_Acionadores = async () => {
@@ -36,10 +45,11 @@ const puxa_Acionadores = async () => {
     // valueIrrigacao = data.Acionadores.Irrigacao
 
 }
+load_data()
 
 
 const set_data = async () => {
-    await load_data(); 
+    
     data.Acionadores = {"Valvula" : valueValvula, "Bomba" : valueBomba, "Irrigacao" : valueIrrigacao}
     puxa_Acionadores();
     service.set(data)
@@ -73,7 +83,7 @@ irrigacao.addEventListener('click', () => {
 setInterval(() => {
     load_data();
 
-}, 100);
+}, 1000);
 
 
 

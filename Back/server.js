@@ -1,0 +1,23 @@
+const express = require("express");
+const app  = express();
+const database = require("./config/db.js")
+const routes = require("./route.js")
+
+const cors = require('cors');
+app.use(cors({
+    origin: '*'
+}));
+app.use(routes)
+
+const port = 8080
+
+
+require("./models/Acionadores.js");
+require("./models/Sensor.js");
+
+
+
+database.sync({alter : true});
+const server = app.listen(port, () => console.log(`Listening on port http://localhost:${port}`));
+
+module.exports = server;
