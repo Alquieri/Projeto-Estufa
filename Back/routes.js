@@ -1,9 +1,9 @@
 const express = require('express')
 const routes = express.Router()
 
-/* EXAMPLE
-const cidade = require('./controllers/<ENTITY>.js')
-routes.<METHOD>('/<ROUTE>', <ENTTTY>.<FUNCAO>)
-*/
+
+const Acionadores = require('./controllers/AcionadoresController.js')
+routes.put('/Acionadores',Acionadores.updateAcionador)
+routes.get('/acionadores/get',Acionadores.getAcionadores)
 
 module.exports = routes

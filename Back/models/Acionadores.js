@@ -10,15 +10,15 @@ const Acionadores = database.define("Acionadores_tb", {
         primaryKey: true
     },
     Bomba : {
-        type: Sequelize.BO,
+        type: Sequelize.BOOLEAN,
         allowNull: false,
     },
     Irrigacao : {
-        type: Sequelize.INTEGER,
+        type: Sequelize.BOOLEAN,
         allowNull: false,
     },
     Valvula : {
-        type: Sequelize.INTEGER,
+        type: Sequelize.BOOLEAN,
         allowNull: false,
     }
     
