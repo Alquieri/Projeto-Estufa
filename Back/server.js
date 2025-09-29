@@ -7,12 +7,12 @@ const cors = require('cors');
 app.use(cors({
     origin: '*'
 }));
+app.use(express.json())
 app.use(routes)
 
 const port = 8080
 
 
-require("./models/Acionadores.js");
 require("./models/Sensor.js");
 
 

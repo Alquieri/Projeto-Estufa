@@ -5,10 +5,10 @@ from machine import ADC, Pin, PWM
 import time
 import dht
 
-
+#Davi
 #Credenciais do WIFI
-nome = "POCO X7 Pro"
-senha = "12345678"
+nome = "Ana Queiroz"
+senha = "Anabanana"
     
 # Endereço do firebase
 firebase = "https://greengarden-fd823-default-rtdb.firebaseio.com/"
@@ -55,64 +55,65 @@ def enviarFire(data, complement = ""): #inserir no data
 conectarWifi()
 
 # FUNÇOES PARA LIGAR AS COISINHAS
-valvula_pin = Pin(4, Pin.OUT)
-bomba_pin = Pin(5, Pin.OUT)
-irrigacao_pin = Pin(23, Pin.OUT)
+bomba_pin  = Pin(5, Pin.OUT)
+cooler_pin = Pin(4, Pin.OUT)
+
 data = {}
 
 
 # FUNÇOES PARA MANDAR AS COISINHAS
 dht_sensor = dht.DHT11(Pin(32))
+ldr = ADC(Pin(34))
+ldr.atten(ADC.ATTN_11DB)  
+ldr.width(ADC.WIDTH_12BIT)
+
 
 while True:
     # FUNÇOES PARA LIGAR AS COISINHAS
     data = getData()
     print("[GET]")
     
-    valvula_status = data["Acionadores"]["Valvula"]
+    cooler_status = data["Acionadores"]["Cooler"]
     bomba_status = data["Acionadores"]["Bomba"]
-    irrigacao_status = data["Acionadores"]["Irrigacao"]
+    #luz_status = data["Acionadores"]["luz"]
     
-    if valvula_status:
-       # print("valvula : ", valvula_status)
-        valvula_pin.value(1)
-    else:
-       # print("valvula : ", valvula_status)
-        valvula_pin.value(0)
         
     if bomba_status:
-       # print("bomba : ", bomba_status)
+        #print("bomba : ", bomba_status)
         bomba_pin.value(1)
     else:
-       # print("bomba : ", bomba_status)
+        #print("bomba : ", bomba_status)
         bomba_pin.value(0)
         
-    if irrigacao_status:
-      #  print("irrigacao : ", irrigacao_status)
-        irrigacao_pin.value(1)
+    if cooler_status:
+        #print("Cooler : ", cooler_status)
+        cooler_pin.value(1)
     else:
-        #print("irrigacao : ", irrigacao_status)
-        irrigacao_pin.value(0)
+        #print("Cooler : ", cooler_status)
+        cooler_pin.value(0)
     time.sleep_ms(100)
     
     # FUNÇOES PARA MANDAR AS COISINHAS
-
     
     try:
         dht_sensor.measure()
         temp = dht_sensor.temperature()
         hum = dht_sensor.humidity()
+        ldr_value = ldr.read()
+        porcentagem = (ldr_value / 4095) * 100
 
         temp_temp = (5000/3) * (temp - 20)
         temp_temp = round(temp_temp)
         print(temp)
         print(hum)
+        print("LDR:", round(porcentagem,2))
         
         time.sleep_ms(100)
         # temperaturas.json
         sensor = {
             "Temperatura": temp,
-            "Umidade": hum
+            "Umidade": hum,
+            "Luz": round(porcentagem,2)
         }
         
         enviarFire(sensor, "Sensor")
@@ -128,15 +129,4 @@ while True:
     
     
         
-  
-   
-    
-    
-    
-    
-    
 
-     
-            
-            
-            

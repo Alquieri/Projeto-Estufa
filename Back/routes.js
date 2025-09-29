@@ -2,8 +2,9 @@ const express = require('express')
 const routes = express.Router()
 
 
-const Acionadores = require('./controllers/AcionadoresController.js')
-routes.put('/Acionadores',Acionadores.updateAcionador)
-routes.get('/acionadores/get',Acionadores.getAcionadores)
+const Sensor = require('./controllers/SensorController.js')
+routes.post('/sensor',Sensor.PostSensor)
+routes.get('/get/sensor/data',Sensor.GetSensorByDate)
+routes.get('/get/sensor', Sensor.GetLastPost)
 
 module.exports = routes
