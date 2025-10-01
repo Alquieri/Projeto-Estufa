@@ -62,7 +62,7 @@ data = {}
 
 
 # FUNÇOES PARA MANDAR AS COISINHAS
-dht_sensor = dht.DHT11(Pin(32))
+dht_sensor = dht.DHT11(Pin(25))
 ldr = ADC(Pin(34))
 ldr.atten(ADC.ATTN_11DB)  
 ldr.width(ADC.WIDTH_12BIT)
@@ -74,9 +74,7 @@ while True:
     print("[GET]")
     
     cooler_status = data["Acionadores"]["Cooler"]
-    bomba_status = data["Acionadores"]["Bomba"]
-    #luz_status = data["Acionadores"]["luz"]
-    
+    bomba_status = data["Acionadores"]["Bomba"]    
         
     if bomba_status:
         #print("bomba : ", bomba_status)
@@ -104,16 +102,16 @@ while True:
 
         temp_temp = (5000/3) * (temp - 20)
         temp_temp = round(temp_temp)
-        print(temp)
-        print(hum)
-        print("LDR:", round(porcentagem,2))
+        print("Temperatura: " + str(temp) + "%")
+        print("Humidade: " + str(hum) + "%")
+        print("Luminosidade: " + str(round(porcentagem,2)) + "%")
         
         time.sleep_ms(100)
         # temperaturas.json
         sensor = {
             "Temperatura": temp,
             "Umidade": hum,
-            "Luz": round(porcentagem,2)
+            "Luminosidade": round(porcentagem,2)
         }
         
         enviarFire(sensor, "Sensor")

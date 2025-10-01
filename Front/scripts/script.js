@@ -9,6 +9,7 @@ const umidade = document.getElementById("umidade-data")
 const temp_int = document.getElementById("temperatura-data-int")
 const luz = document.getElementById("luminosidade-data") 
 
+const url = "http://localhost:8080"
 let data = {}
 
 let valueBomba = false
@@ -71,16 +72,6 @@ cooler.addEventListener('click', () => {
 
 
 
-
-// -------CALENDARIO------
-
-document.getElementById('buscar-data').addEventListener('click', function () {
-  const calendario = document.getElementById('input-date').value;
-
-  console.log(calendario)
-
-
-});
 
 setInterval(() => {
     load_data();

@@ -1,4 +1,5 @@
 const Sensor = require('../models/Sensor.js')
+const { Op } = require('sequelize');
 
 module.exports = {
 
@@ -19,10 +20,19 @@ module.exports = {
 // #COMO FAZER O MINHA DATA VIR PRO BACK AQUI 
 
      async GetSensorByDate(req,res){
+        const date = req.params.date
+
+
+    const inicioDoDia = new Date(`${date}T00:00:00.000Z`);
+    const fimDoDia = new Date(`${date}T23:59:59.999Z`);
+
+
+
+
         try {
        const ByDate = await Sensor.findAll({
         where: {
-            createdAt: { [Op.eq]: MINHA_DATA } 
+            createdAt: { [Op.between]: [inicioDoDia , fimDoDia] } 
         }
         });
 
