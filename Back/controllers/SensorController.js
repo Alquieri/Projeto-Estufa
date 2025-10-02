@@ -17,17 +17,12 @@ module.exports = {
     },
 
 
-// #COMO FAZER O MINHA DATA VIR PRO BACK AQUI 
 
      async GetSensorByDate(req,res){
         const date = req.params.date
 
-
-    const inicioDoDia = new Date(`${date}T00:00:00.000Z`);
-    const fimDoDia = new Date(`${date}T23:59:59.999Z`);
-
-
-
+        const inicioDoDia = new Date(`${date}T00:00:00.000Z`);
+        const fimDoDia = new Date(`${date}T23:59:59.999Z`);
 
         try {
        const ByDate = await Sensor.findAll({

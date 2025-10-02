@@ -1,64 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/estiloHistorico.css" />
-    <title>CiberFarm</title>
-    <link rel="shortcut icon" type="imagex/png" href="./Imagens/logo.png" />
+    <link rel="stylesheet" href="../css/estiloHistorico.css" /> <title>CiberFarm - Histórico</title>
+    <link rel="shortcut icon" type="imagex/png" href="../Imagens/logo.png" />
   </head>
   <body>
-  <div class="barra-superior">
-    <a href="./Inicio.html">
-      <img class="ciberfarm" src="../Imagens/CyberFarm.png" alt="CyberFarm Logo" />
-    </a>
-  </div>
-
-  <div class="layout-principal">
-    
-    <div class="alinha-navegacao">
-      <div class="navegacao">
-        <a href="./Inicio.html" class="textosNavigation button">
-          <img class="dash" src="../Imagens/home.png" alt="Sem casa" />
-          Dashboard
-        </a>
-      </div>
-      <div class="navegacao bordinha">
-        <a href="./historico.html" class="textosNavigation button">
-          <img class="agua" src="../Imagens/thermometer.png" alt="Sem água" />
-          Histórico
-        </a>
-      </div>
-      <div class="navegacao">
-        <a href="./sobre.html" class="textosNavigation button">
-          <img class="agua" src="../Imagens/water.png" alt="Sem água" />
-          Sobre
-        </a>
-      </div>
+    <div class="barra-superior">
+      <a href="./Inicio.html">
+        <img class="ciberfarm" src="../Imagens/CyberFarm.png" alt="CyberFarm Logo" />
+      </a>
     </div>
 
-    <main class="conteudo-principal">
-      
-      <div class="calendar">
-        <div class="texto">Data</div>
-        <input type="date" id="input-date" class="input-date" />
-        <button id="buscar-data">Buscar</button>
+    <div class="flex">
+      <div class="alinha-navegacao">
+        <div class="navegacao">
+          <a href="./Inicio.html" class="textosNavigation button">
+            <img class="dash" src="../Imagens/home.png" alt="Dashboard" />
+            Dashboard
+          </a>
+        </div>
+        <div class="navegacao bordinha">
+          <a href="./historico.html" class="textosNavigation button">
+            <img class="agua" src="../Imagens/thermometer.png" alt="Histórico" />
+            Histórico
+          </a>
+        </div>
+        <div class="navegacao">
+          <a href="./sobre.html" class="textosNavigation button">
+            <img class="agua" src="../Imagens/water.png" alt="Sobre" />
+            Sobre
+          </a>
+        </div>
       </div>
 
-      <div class="graficos-container">
-        <div class="grafico">
-          <canvas id="temperaturaChart"></canvas>
+      <main class="conteudo-principal">
+        <div class="seletor-data">
+          <label for="input-date" class="texto">Data</label>
+          <input type="date" id="input-date" />
+          <button id="buscar-data">Buscar</button>
         </div>
-        <div class="grafico">
-          <canvas id="umidadeChart"></canvas>
+        <div class="graficos-container">
+          <div class="grafico">
+            <canvas id="temperaturaChart"></canvas>
+          </div>
+          <div class="grafico">
+            <canvas id="umidadeChart"></canvas>
+          </div>
+          <div class="grafico">
+            <canvas id="luzChart"></canvas>
+          </div>
         </div>
-        <div class="grafico">
-          <canvas id="luzChart"></canvas>
-        </div>
-      </div>
+      </main>
+    </div>
 
-    </main> </div> <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script type="module" src="../scripts/historico.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="../scripts/historico.js"></script>
   </body>
 </html>

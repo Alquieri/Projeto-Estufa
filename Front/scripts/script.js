@@ -26,7 +26,7 @@ const load_data = async () => {
 
     umidade.textContent = data.Sensor.Umidade
     temp_int.textContent = data.Sensor.Temperatura
-    luz.textContent = data.Sensor.Luz
+    luz.textContent = data.Sensor.Luminosidade
 
 }
 
@@ -35,10 +35,8 @@ const puxa_Acionadores = async () => {
 
 
     bomba.textContent = data.Acionadores.Bomba ? '1' : '0'
-    // valueBomba = data.Acionadores.Bomba
     
     cooler.textContent = data.Acionadores.Cooler ? '1' : '0' 
-    // valueIrrigacao = data.Acionadores.Irrigacao
 
 }
 load_data()

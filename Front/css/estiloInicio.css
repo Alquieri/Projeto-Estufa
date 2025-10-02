@@ -25,6 +25,7 @@ body {
 .flex2 {
   display: flex;
   justify-content: center;
+  margin-left: 20vh;
 }
 
 .flex3 {
@@ -171,7 +172,7 @@ body {
 }
 
 .meio {
-  align-content: flex-start;
+  align-content: center;
   height: 25vh;
   width: 23vw;
   padding: 3vh;
@@ -179,7 +180,7 @@ body {
   box-shadow: rgb(196, 199, 218) 0px 2px 1px, rgba(196, 199, 218) 0px 4px 2px,
     rgba(196, 199, 218) 0px 8px 4px;
   background-color: rgb(241, 235, 227);
-  margin: 0 1rem 1rem 1rem;
+  margin:  1rem 1rem 1rem;
   position: relative;
 }
 
@@ -192,12 +193,8 @@ body {
 
 .calendar {
   padding: 3vh;
-  background-color: rgb(241, 235, 227);
-  border-radius: 30px;
-  box-shadow: rgb(196, 199, 218) 0px 2px 1px, rgba(196, 199, 218) 0px 4px 2px,
-    rgba(196, 199, 218) 0px 8px 4px;
-  height: 18vh;
-  width: 53vh;
+  height: 10vh;
+  width: 20vh;
   margin-right: 7vh;
   display: flex;
   justify-content: center;
@@ -239,7 +236,7 @@ body {
   width: 4vw;
   height: 4vw;
   border-radius: 50%;
-  /* background-color: rgb(226, 220, 212); */
+
   border: 2px solid rgb(30, 82, 20);
   display: flex;
   justify-content: center;
@@ -258,37 +255,9 @@ body {
   color: rgb(61, 61, 61);
   text-decoration: none;
 }
-.circulo.ativo {
-  color: white; /* Texto branco */
-  box-shadow: 0 0 10px 4px #388e3c; /* Sombra verde */
-  border: none; /* Remove a borda */
-}
 
-#buscar-data {
-  margin-top: 10%;
-  margin-left: 3%;
-  padding: 1vh 2vw;
-  font-size: 2vh;
-  color: black;;
-  background-color: #f1ebe3;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: 0.9s;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  border: 2px solid rgb(30, 82, 20);
-}
 
-#buscar-data:hover {
-  color: white; /* Texto branco */
-  background-color: rgb(30, 82, 20);
-}
-
-#buscar-data:active {
-  background-color: rgb(16, 43, 19);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3);
-  transform: scale(0.98);
-}
+/* ANIMAÇÃO*/
 
 @keyframes pulsar {
   0% {

@@ -1,3 +1,6 @@
+/* Arquivo: ../css/estiloHistorico.css */
+/* Versão final com alinhamento corrigido e seletor de data estilizado. */
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
@@ -10,60 +13,13 @@
 body {
   background-color: rgb(250, 244, 235);
   height: 100vh;
-}
-
-/* =================================================== */
-/* === NOVAS REGRAS DE LAYOUT PARA CORRIGIR O BUG === */
-/* =================================================== */
-
-.layout-principal {
-  display: flex;
-  align-items: flex-start; /* Alinha nav e conteúdo no topo */
-  margin-top: 5vh;
-  padding: 0 2vw;
-  gap: 2vw; /* Espaço entre a navegação e o conteúdo */
-}
-
-.conteudo-principal {
-  flex: 1; /* Faz esta coluna ocupar todo o espaço restante */
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Alinha o calendário à direita */
-  width: 100%;
 }
 
-/* Removemos a regra .flex antiga para evitar conflitos */
-.flex {
-  /* Estilos antigos foram movidos para .layout-principal */
-}
-
-
-/* =================================================== */
-/* === O RESTO DO SEU CSS (COM PEQUENOS AJUSTES) === */
-/* =================================================== */
-
-.flex2 {
-  display: flex;
-  justify-content: center;
-}
-
-.flex3 {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 2vh;
-}
-
-.alinha-navegacao {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 25px;
-  height: 30vh;
-  width: 20vw;
-  min-width: 200px; /* Aumentei um pouco para não espremer o texto */
-}
-
+/* ------------------- */
+/* BARRA SUPERIOR E LAYOUT */
+/* ------------------- */
 .barra-superior {
   display: flex;
   height: 8vh;
@@ -73,10 +29,32 @@ body {
   background-color: rgb(241, 235, 227);
   box-shadow: rgb(196, 199, 218) 0px 2px 1px, rgba(196, 199, 218) 0px 4px 2px,
     rgba(196, 199, 218) 0px 8px 4px;
+  flex-shrink: 0;
 }
 
 .ciberfarm {
   height: 6vh;
+}
+
+.flex {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  margin-top: 2vh; /* << CORRIGIDO PARA O VALOR PERFEITO! */
+}
+
+/* ------------------- */
+/* NAVEGAÇÃO LATERAL */
+/* ------------------- */
+.alinha-navegacao {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5vh;
+  gap: 25px;
+  width: 20vw;
+  min-width: 220px;
+  background-color: rgb(250, 244, 235);
+  flex-shrink: 0;
 }
 
 .navegacao {
@@ -93,12 +71,14 @@ body {
   transition: 0.9s;
 }
 
-.button {
+.textosNavigation {
   display: flex;
   align-items: center;
-  height: 8vh;
   width: 100%;
-  border-radius: 0 90px 90px 0px;
+  height: 100%;
+  text-decoration: none;
+  font-size: 2.5vh;
+  color: black;
 }
 
 .navegacao:hover {
@@ -108,118 +88,131 @@ body {
 .navegacao:hover .textosNavigation {
   color: rgba(226, 220, 212, 0.822);
 }
-.navegacao:hover .agua,
-.navegacao:hover .temp,
-.navegacao:hover .dash {
+.navegacao:hover img {
   filter: brightness(0) invert(1);
 }
 
-.navegacao:active {
-  box-shadow: inset rgb(16, 43, 19) 1px 3px 3px 3px;
+.bordinha {
+  border: 2px solid rgb(16, 43, 19);
 }
 
-.agua, .temp, .dash {
+.navegacao img {
   height: 3vh;
   margin-right: 1vw;
 }
 
-.textosNavigation {
-  font-size: 2.5vh;
-  color: black;
-  text-decoration: none;
+
+.conteudo-principal {
+  flex-grow: 1;
+  padding: 3vh 2vw;
+  overflow-y: auto;
 }
 
-.texto {
-  font-size: 2.5vh;
-  color: rgb(61, 61, 61);
-}
-
-.bordinha {
-  border: 2px solid rgb(30, 82, 20);
-}
-
-/* CALENDARIO */
-.calendar {
-  width: 100%; /* Ocupa a largura do container pai */
-  max-width: 450px; /* Largura máxima */
-  margin-bottom: 30px; /* Espaço entre o calendário e os gráficos */
+.seletor-data {
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
   padding: 2vh 2vw;
+  margin-bottom: 3vh;
   background-color: rgb(241, 235, 227);
-  border-radius: 30px;
+  border-radius: 20px;
   box-shadow: rgb(196, 199, 218) 0px 2px 1px, rgba(196, 199, 218) 0px 4px 2px,
     rgba(196, 199, 218) 0px 8px 4px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
 }
 
-.input-date {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
+.seletor-data .texto {
+  font-size: 2.5vh;
+  color: rgb(61, 61, 61);
+  font-weight: 500;
+}
+
+#input-date {
+  width: 250px;
+  padding: 1.2vh;
+  font-size: 2vh;
+  font-family: inherit;
   color: rgb(30, 82, 20);
-  background-color: #f1ebe3;
-  border: 2px solid rgb(30, 82, 20);
-  border-radius: 20px;
+  background-color: rgb(250, 244, 235);
+  border: 2px solid rgb(226, 220, 212);
+  border-radius: 15px;
   outline: none;
+  transition: all 0.3s ease;
 }
 
-.input-date:focus {
-  border-color: #388e3c;
-  box-shadow: 0 0 8px rgb(30, 82, 20);
+#input-date:focus {
+  border-color: rgb(30, 82, 20);
+  box-shadow: 0 0 8px rgba(30, 82, 20, 0.5);
 }
 
-.input-date::-webkit-calendar-picker-indicator {
+#input-date::-webkit-calendar-picker-indicator {
   background-color: rgb(136, 187, 142);
-  padding: 5px;
+  padding: 8px;
   border-radius: 50%;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#input-date::-webkit-calendar-picker-indicator:hover {
+  background-color: rgb(30, 82, 20);
 }
 
 #buscar-data {
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
+  padding: 1.2vh 2vw;
+  font-size: 2vh;
+  font-weight: 500;
   color: black;
-  background-color: #f1ebe3;
-  border: none;
-  border-radius: 20px;
+  background-color: rgb(226, 220, 212);
+  border: 2px solid rgb(226, 220, 212);
+  border-radius: 15px;
   cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  border: 2px solid rgb(30, 82, 20);
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #buscar-data:hover {
   color: white;
   background-color: rgb(30, 82, 20);
+  border-color: rgb(30, 82, 20);
 }
 
-#buscar-data:active {
-  background-color: rgb(16, 43, 19);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3);
-  transform: translateY(2px);
-}
-
-/* GRÁFICOS */
+/* Container dos Gráficos */
 .graficos-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  padding: 0; /* Removido padding para alinhar com o pai */
-  width: 100%; /* Ocupa 100% da coluna de conteúdo */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3vh 2vw;
 }
 
 .grafico {
-  flex: 1 1 350px;
-  max-width: 500px;
-  padding: 20px;
-  background-color: rgb(241, 235, 227);
-  border-radius: 20px;
+  padding: 20vh;
+  border-radius: 25px;
   box-shadow: rgb(196, 199, 218) 0px 2px 1px, rgba(196, 199, 218) 0px 4px 2px,
     rgba(196, 199, 218) 0px 8px 4px;
+  background-color: rgb(241, 235, 227);
+  height: 100%;
+}
+
+/* ------------------- */
+/* RESPONSIVIDADE */
+/* ------------------- */
+@media (max-width: 900px) {
+  .flex {
+    flex-direction: column;
+    overflow-y: auto;
+    margin-top: 1vh; /* Ajuste para telas menores */
+  }
+  .alinha-navegacao {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+  }
+  .navegacao {
+    border-radius: 30px;
+    padding: 0 20px;
+    width: auto;
+  }
+  .textosNavigation {
+    font-size: 1.8vh;
+  }
 }
