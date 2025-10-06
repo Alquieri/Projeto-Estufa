@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../css/estiloInicio.css" />
     <title>CiberFarm</title>
 
-    <link rel="shortcut icon" type="imagex/png" href="./Imagens/logo.png" />
+    <link rel="shortcut icon" type="imagex/png" href="../Imagens/logo.png" />
   </head>
   <body>
     <div class="barra-superior">
@@ -40,7 +40,7 @@
       <div class="alinha-meio">
         <div>
           <div class="meio">
-            <div class="texto">Humidade</div>
+            <div class="texto">Humildade</div>
             <img
               class="img_meio"
               src="../Imagens/humidity.png"
@@ -50,9 +50,23 @@
               <span id="umidade-data" class="sensor-data">--</span>%
               <!--HUMILDADE -->
             </div>
+
+
+
+
           </div>
           <div class="meio">
-            <div class="texto">Acionadores</div>
+            <div class="manual-acionadores">
+              <div class="texto">Acionadores</div>
+              <label class="switch">
+                <input type="checkbox" id="manual"/>
+                <span class="slider"></span>
+              </label>
+            </div>
+
+
+
+
             <div class="flex3">
               <div id = "bomba" class="circulo">
                 <span>--</span>
@@ -72,7 +86,7 @@
             <div class="texto">Temperatura Interna</div>
             <img
               src="../Imagens/temperatures.png"
-              class="img_meio"
+              class="img_meio img_temp"
               alt="No temperatures"
             />
             <div class="texto-sensores container">

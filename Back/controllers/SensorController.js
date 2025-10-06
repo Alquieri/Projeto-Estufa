@@ -8,7 +8,7 @@ module.exports = {
         const data = req.body; 
 
         await Sensor.create({
-            Luz : data.Luz,
+            Luz : data.Luminosidade,
             Temperatura : data.Temperatura,
             Umidade : data.Umidade
         })

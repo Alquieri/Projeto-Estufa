@@ -279,4 +279,119 @@ body {
 }
 
 
+@keyframes girar-pulsar-pausar {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  20% { 
+    transform: rotate(180deg) scale(1);
+  }
+
+  21% { 
+    transform: rotate(180deg) scale(1.05); 
+  }
+  25% {
+    transform: rotate(180deg) scale(0.95);
+  }
+  29% {
+    transform: rotate(180deg) scale(1.05);
+  }
+  30% { 
+    transform: rotate(180deg) scale(1); 
+  }
+
+  40% { 
+    transform: rotate(180deg) scale(1); 
+  }
+
+  60% { 
+    transform: rotate(360deg) scale(1);
+  }
+
+  61% {
+    transform: rotate(360deg) scale(1.05);
+  }
+  65% {
+    transform: rotate(360deg) scale(0.95);
+  }
+  69% {
+    transform: rotate(360deg) scale(1.05);
+  }
+  70% { 
+    transform: rotate(360deg) scale(1);
+  }
+  
+  100% { 
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.img_temp {
+  animation: girar-pulsar-pausar 13s ease-in-out infinite; 
+  transform-origin: center center; 
+}
+
+/*BOTÃO FUNÇÃO MANUAL*/
+
+.manual-acionadores {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espaço entre "Manual" e "Acionadores" */
+}
+
+.texto-acionadores {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espaço entre texto e switch */
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Container do switch */
+.switch {
+  position: relative;
+  left: 170px;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+/* Esconde o checkbox padrão */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(154, 158, 152);
+  border-radius: 28px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: White;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+  background-color: rgb(30, 82, 20);
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(22px);
+}
 
