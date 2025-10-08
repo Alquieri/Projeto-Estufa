@@ -75,7 +75,7 @@ while True:
     
     cooler_status = data["Acionadores"]["Cooler"]
     bomba_status = data["Acionadores"]["Bomba"]    
-
+        
     if bomba_status:
         #print("bomba : ", bomba_status)
         bomba_pin.value(1)

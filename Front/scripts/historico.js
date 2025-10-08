@@ -146,8 +146,16 @@ function processarErenderizarGraficos(data) {
                     display: true,
                     text: 'Temperatura Média por Hora'
                 }
-            }
-        }
+            },
+            scales: { 
+                    y: {
+                        min: 10,   
+                        max: 40   
+                    }
+        },
+     
+    }
+
     });
 
     const ctxUmi = document.getElementById('umidadeChart').getContext('2d');
@@ -171,6 +179,12 @@ function processarErenderizarGraficos(data) {
                     display: true,
                     text: 'Umidade Média por Hora'
                 }
+            },
+            scales: { 
+                    y: {
+                        min: 0,   
+                        max: 100   
+                    }
             }
         }
     });
@@ -195,6 +209,12 @@ function processarErenderizarGraficos(data) {
                 title: {
                     display: true,
                     text: 'Luminosidade Média por Hora'
+                }
+                },
+            scales: { 
+                y: {
+                    min: 0,   
+                    max: 100   
                 }
             }
         }

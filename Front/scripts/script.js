@@ -55,7 +55,6 @@ const set_data = async () => {
     service.set(data)
 }
 
-/*Aqui se ele desativa os botoes de acionadores e muda a aparencia se o Manual estiver ativo*/
 
 const updateAcionadoresStatus = () => {
   acionadoresAtivos = valueManual; // acionadoresAtivos é true se manual estiver ativado
